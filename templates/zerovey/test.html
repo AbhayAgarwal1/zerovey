@@ -1,0 +1,19 @@
+{% if user.is_authenticated %}
+howdy {{ user.username }}!
+{% else %}
+hey there partner!
+{% endif %}
+
+
+{% extends 'zerovey/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+Test
+{% endblock %}
+{% block body_block %}
+{% if user.is_authenticated %}
+howdy {{ user.username }}!
+{% else %}
+hey there partner!
+{% endif %}
+{% endblock %}

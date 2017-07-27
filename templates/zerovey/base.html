@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+<title>
+Rango -
+{% block title_block %}
+How to Tango with Django!
+{% endblock %}
+</title>
+</head>
+<body>
+<div>
+{% if user.is_authenticated %}
+howdy {{ user.username }}!
+{% else %}
+hey there partner!
+{% endif %}
+{% block body_block %}
+
+{% endblock %}
+</div>
+
+</body>
+</html>

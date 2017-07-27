@@ -1,0 +1,21 @@
+{% extends 'zerovey/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+Blog
+{% endblock %}
+{% block body_block %}
+<h1>blog</h1>
+<div>
+{% if categories %}
+<ul>
+{% for category in categories %}
+<h1><li>{{ category.title }}</li></h1>
+{{category.body}} 
+{{category.author}}<br><br>
+{% endfor %}
+</ul>
+{% else %}
+<strong>There are no categories present.</strong>
+{% endif %}
+</div>
+{% endblock %}
